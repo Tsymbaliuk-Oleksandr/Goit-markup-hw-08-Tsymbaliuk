@@ -1,0 +1,29 @@
+.sekond-list {
+  display: flex;
+}
+
+.sekond-list__item {
+  width: 270px;
+  text-align: center;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.sekond-list__name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.sekond-list__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--contacts-color);
+  text-align: left;
+}
