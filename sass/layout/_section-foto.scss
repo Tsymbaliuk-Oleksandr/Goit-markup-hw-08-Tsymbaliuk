@@ -9,11 +9,16 @@
 .fourth-title,
 .third-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .third-list {
@@ -26,6 +31,9 @@
   &:not(:last-child) {
     margin-right: 30px;
   }
+  /*Відстань можна зажати ще за формулою*/
+  // flex-basis: calc((100% - 60px / 3));
+  // margin-right: 30px;
 }
 
 .third-list__icon-label {
