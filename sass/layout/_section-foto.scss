@@ -1,3 +1,10 @@
+.section-foto {
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 94px;
+    display: none;
+  }
+}
+
 .third-title-name,
 .fourth-title,
 .third-title {
