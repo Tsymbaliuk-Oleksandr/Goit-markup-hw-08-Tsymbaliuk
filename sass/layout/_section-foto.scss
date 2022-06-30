@@ -23,17 +23,21 @@
 
 .third-list {
   display: flex;
-}
 
-.third-list__item {
-  position: relative;
-  text-align: center;
-  &:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    position: relative;
+    text-align: center;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    /*Відстань можна зажати ще за формулою*/
+    // flex-basis: calc((100% - 60px / 3));
+    // margin-right: 30px;
   }
-  /*Відстань можна зажати ще за формулою*/
-  // flex-basis: calc((100% - 60px / 3));
-  // margin-right: 30px;
+  &__foto {
+    display: block;
+    max-width: 100%;
+  }
 }
 
 .third-list__icon-label {

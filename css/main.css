@@ -662,7 +662,6 @@ address {
 .third-list {
   display: flex;
 }
-
 .third-list__item {
   position: relative;
   text-align: center;
@@ -670,6 +669,10 @@ address {
 }
 .third-list__item:not(:last-child) {
   margin-right: 30px;
+}
+.third-list__foto {
+  display: block;
+  max-width: 100%;
 }
 
 .third-list__icon-label {
