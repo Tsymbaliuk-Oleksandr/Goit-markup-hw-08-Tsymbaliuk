@@ -5,8 +5,40 @@
   padding-bottom: 60px;
 }
 
+.footer-block {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+}
+
 .footerwork {
-  margin-right: 70px;
+  // margin-right: 70px;
+  // justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   justify-content: space-around;
+  // }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footerwork__logo-web {
@@ -16,7 +48,7 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  display: flex;
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -80,8 +112,10 @@
   letter-spacing: 0.03em;
   margin-bottom: 20px;
   color: var(--btn-color);
-  align-items: center;
-  justify-content: center;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .icon-container__list {
@@ -125,27 +159,43 @@
 }
 
 .btn-mail-box {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.label-box {
+  // margin-right: 12px;
+  // width: 358px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .btn-mail-box__modal-input {
-  width: 358px;
+  display: block;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  margin-right: 12px;
   background-color: #2f303a;
-  align-items: center;
+  // align-items: center;
   letter-spacing: 0.03em;
   padding-left: 16px;
   color: rgba(255, 255, 255, 0.6);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+    width: 358px;
+  }
 }
 
 .btn-mail-box__modal-button {
   font-family: inherit;
-  position: relative;
+  // position: relative;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -165,12 +215,17 @@
   text-align: center;
   display: flex;
   letter-spacing: 0.06em;
-  margin-left: 12px;
   color: #ffffff;
 
   &:hover,
   &:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
   }
 }
 

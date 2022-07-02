@@ -28,38 +28,100 @@
     <header class="header">
       <div class="container header-container">
         <a href="./img/Logo_WebStudio.jpg" class="logo-web link">
-          <span>Web</span>
-          <span class="logo-web--studio">Studio</span>
+          Web<span class="logo-web--studio">Studio</span>
         </a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__list-name">
-              <a href="./index.html" class="nav__item link">Студия</a>
-            </li>
-            <li class="nav__list-name">
-              <a href="" class="nav__item--color link">Портфолио</a>
-            </li>
-            <li class="nav__list-name">
-              <a href="" class="nav__item link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts">
-          <li class="contacts__list-name">
-            <a href="mailto:info@devstudio.com" class="contacts__mail link">
-              <svg class="contacts__icon-mail" width="16px" height="12px">
-                <use href="./img/symbol-defs.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__list-name">
-            <a href="tel:+380961111111" class="contacts__tel link"
-              ><svg class="contacts__icon-tel" width="10px" height="16px">
-                <use href="./img/symbol-defs.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+
+        <!-- Кнопка мобильного меню -->
+        <button
+          type="button"
+          class="button-menu"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class="buttun-menu__icon"
+            width="40"
+            height="40"
+            aria-label="Кнопка мобильного меню"
+          >
+            <use
+              class="button-menu__close"
+              href="./img/symbol-defs-I.svg#icon-close"
+            ></use>
+            <use
+              class="button-menu__menu"
+              href="./img/symbol-defs-I.svg#icon-icons-I"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" data-menu>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-name">
+                <a href="./index.html" class="nav__item link">Студия</a>
+              </li>
+              <li class="nav__list-name">
+                <a href="" class="nav__item--color link">Портфолио</a>
+              </li>
+              <li class="nav__list-name">
+                <a href="" class="nav__item link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="mobile-box">
+            <ul class="contacts">
+              <li class="contacts__list-name">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts__mail contacts__link--mail"
+                >
+                  <svg
+                    class="contacts__icon contacts__icon--mail"
+                    width="16px"
+                    height="12px"
+                  >
+                    <use href="./img/symbol-defs.svg#icon-envelope"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__list-name">
+                <a
+                  href="tel:+380961111111"
+                  class="contacts__tel contacts__link--tel"
+                  ><svg
+                    class="contacts__icon contacts__icon--tel"
+                    width="10px"
+                    height="16px"
+                  >
+                    <use
+                      href="./img/symbol-defs.svg#icon-smartphone"
+                    ></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+
+            <ul class="social-web">
+              <li class="social-web__item">
+                <a href="" class="social-web__link">Instagram</a>
+              </li>
+
+              <li class="social-web__item">
+                <a href="" class="social-web__link">Twitter</a>
+              </li>
+
+              <li class="social-web__item">
+                <a href="" class="social-web__link">Facebook</a>
+              </li>
+
+              <li class="social-web__item">
+                <a href="" class="social-web__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -93,12 +155,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.1.jpg"
-                    alt="work of programmer"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-laptop1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-laptop2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-laptop1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-laptop2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-laptop1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-laptop2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-laptop1x.jpg"
+                      alt="work of programmer"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -115,12 +208,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.2.jpg"
-                    alt="Poster New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-bask1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-bask2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-bask1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-bask2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-bask1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-bask2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-bask1x.jpg"
+                      alt="Poster New Orlean vs Golden Star"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -139,12 +263,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.3.jpg"
-                    alt="Logo of restoran Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-seafood1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-seafood2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-seafood1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-seafood2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-seafood1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-seafood2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-seafood1x.jpg"
+                      alt="Logo of restoran Seafood"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -161,12 +316,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.4.jpg"
-                    alt="Headphones"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-naushniki1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-naushniki2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-naushniki1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-naushniki2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-naushniki1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-naushniki2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-naushniki1x.jpg"
+                      alt="Headphones"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -183,12 +369,44 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.5.jpg"
-                    alt="Two boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-boxes1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-boxes2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-boxes1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-boxes2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-boxes1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-boxes2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-boxes1x.jpg"
+                      alt="Two boxes"
+                      width="100%"
+                    />
+                  </picture>
+
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -205,12 +423,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.6.jpg"
-                    alt="Monitor"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-monitor1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-monitor2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-monitor1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-monitor2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-monitor1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-monitor2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-monitor1x.jpg"
+                      alt="Monitor"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -229,12 +478,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.7.jpg"
-                    alt="Book"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-book1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-book2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-book1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-book2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-book1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-book2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-book1x.jpg"
+                      alt="Book"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -251,12 +531,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.8.jpg"
-                    alt="Birka z Leiblom"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-label1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-label2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-label1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-label2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-label1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-label2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-label1x.jpg"
+                      alt="Birka z Leiblom"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -273,12 +584,43 @@
             <li class="portfolio-container__li">
               <a href="" class="portfolio-container__foto">
                 <div class="portfolio-overlay">
-                  <img
-                    src="./img/Foto_II.9.jpg"
-                    alt="Laptop"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_mob/img-nout1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_mob/img-nout2x.jpg 2x
+                      "
+                      sizes="450px"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_tablet/img-nout1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_tablet/img-nout2x.jpg 2x
+                      "
+                      sizes="354px"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      type="image/jpeg"
+                    />
+
+                    <source
+                      srcset="
+                        ./img/portfolio-foto/portfolio_desctop/img-nout1x.jpg 1x,
+                        ./img/portfolio-foto/portfolio_desctop/img-nout2x.jpg 2x
+                      "
+                      sizes="370px"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./img/portfolio-foto/portfolio_mob/img-nout1x.jpg"
+                      alt="Laptop"
+                      width="100%"
+                    />
+                  </picture>
                   <span class="portfolio-container__icon-text"
                     >Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -300,87 +642,97 @@
 
     <!--Fotter-->
     <footer class="footer">
-      <div class="container header-container">
-        <div class="footerwork">
-          <a href="./img/Logo_WebStudio.jpg" class="footerwork__logo-web link">
-            <span>Web</span>
-            <span class="footerwork__logo-web--studio">Studio</span>
-          </a>
-          <address class="address">
-            <ul class="address-list">
-              <li class="address__sait-item">
-                <a
-                  href="https://goo.gl/maps/1LbGTkgGGpXqYZ2G8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="address__sait link"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+      <div class="container footer-container">
+        <div class="footer-block">
+          <div class="footerwork">
+            <a href="./img/Logo_WebStudio.jpg" class="footerwork__logo-web link"
+              >Web<span class="footerwork__logo-web--studio">Studio</span>
+            </a>
+            <address class="address">
+              <ul class="address-list">
+                <li class="address__sait-item">
+                  <a
+                    href="https://goo.gl/maps/1LbGTkgGGpXqYZ2G8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="address__sait link"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="address__mail-item">
+                  <a href="mailto:info@devstudio.com" class="address__mail link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a href="tel:+380961111111" class="address__tel link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="icon-container">
+            <h3 class="footer-box__title">ПРИСОЕДИНЯЙТЕСЬ</h3>
+            <ul class="icon-container__list">
+              <li class="icon-container__item">
+                <a href="" class="icon-container__link link">
+                  <svg class="icon-container__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__mail-item">
-                <a href="mailto:info@devstudio.com" class="address__mail link"
-                  >info@devstudio.com</a
-                >
+              <li class="icon-container__item">
+                <a href="" class="icon-container__link link">
+                  <svg class="icon-container__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a href="tel:+380961111111" class="address__tel link"
-                  >+38 096 111 11 11</a
-                >
+              <li class="icon-container__item">
+                <a href="" class="icon-container__link link">
+                  <svg class="icon-container__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="icon-container__item">
+                <a href="" class="icon-container__link link">
+                  <svg class="icon-container__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="icon-container">
-          <ul class="icon-container__list">
-            <li class="icon-container__item">
-              <a href="" class="icon-container__link link">
-                <svg class="icon-container__icon" width="20" height="20">
-                  <use href="./img/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="icon-container__item">
-              <a href="" class="icon-container__link link">
-                <svg class="icon-container__icon" width="20" height="20">
-                  <use href="./img/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="icon-container__item">
-              <a href="" class="icon-container__link link">
-                <svg class="icon-container__icon" width="20" height="20">
-                  <use href="./img/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="icon-container__item">
-              <a href="" class="icon-container__link link">
-                <svg class="icon-container__icon" width="20" height="20">
-                  <use href="./img/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="footer-box">
           <h3 class="footer-box__title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
           <form class="btn-mail-box">
-            <input
-              type="text"
-              class="btn-mail-box__modal-input"
-              placeholder="E-mail"
-            />
-            <button type="button" class="btn-mail-box__modal-button">
-              Подписаться
-              <svg class="btn-mail-box__modal-icon" width="24" height="24">
-                <use href="./img/symbol-defs-I.svg#icon-icon-send"></use>
-              </svg>
-            </button>
+            <div class="label-box">
+              <label class="btn-mail-label" for="user_mail"></label>
+              <input
+                type="text"
+                class="btn-mail-box__modal-input"
+                id="user_mail"
+                name="email"
+                placeholder="E-mail"
+              />
+              <button type="button" class="btn-mail-box__modal-button">
+                Подписаться
+                <svg class="btn-mail-box__modal-icon" width="24" height="24">
+                  <use href="./img/symbol-defs-I.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </footer>
+
+    <!-- Модальне вікно для мобільного телефона -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
